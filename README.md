@@ -1,9 +1,10 @@
 # References:
 
-https://tokio.rs/tokio/tutorial/channels
+https://tokio.rs/tokio/tutorial
 
 ## Four types of tokio channels:
 
+https://tokio.rs/tokio/tutorial/channels
 https://docs.rs/tokio/1.49.0/tokio/sync/
 
 ### oneshot channel
@@ -32,6 +33,20 @@ Consumers are notified when a new value is sent, but there is no guarantee that
 consumers will see all values.
 
 ## Concepts
+
+### Tokio Tasks
+
+Tasks are the unit of execution managed by the scheduler. Spawning the task
+submits it to the Tokio scheduler, which then ensures that the task executes
+when it has work to do. The spawned task may be executed on the same thread as
+where it was spawned, or it may execute on a different runtime thread. The task
+can also be moved between threads after being spawned.
+
+Tasks in Tokio are very lightweight. Under the hood, they require only a single
+allocation and 64 bytes of memory. Applications should feel free to spawn
+thousands, if not millions of tasks.
+
+https://tokio.rs/tokio/tutorial/spawning
 
 ### Actors
 
