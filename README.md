@@ -4,10 +4,6 @@ https://tokio.rs/tokio/tutorial
 
 ## Four types of tokio channels:
 
-https://tokio.rs/tokio/tutorial/channels
-
-https://docs.rs/tokio/1.49.0/tokio/sync/
-
 ### oneshot channel
 
 The oneshot channel supports sending a single value from a single producer to a
@@ -32,6 +28,10 @@ The watch channel supports sending many values from many producers to many
 consumers. However, only the most recent value is stored in the channel.
 Consumers are notified when a new value is sent, but there is no guarantee that
 consumers will see all values.
+
+https://tokio.rs/tokio/tutorial/channels
+
+https://docs.rs/tokio/1.49.0/tokio/sync/
 
 ## Concepts
 
